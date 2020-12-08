@@ -80,7 +80,7 @@ all_files = os.listdir("reuters21578/")
 
 for f in all_files:     #read all the files with .sgm extension
     if f[-4:] == ".sgm":
-        fi = open("reuters21578/" + f,'r')
+        fi = open("reuters21578/" + f,mode = 'r', encoding = 'latin-1')
         text = fi.read()
         # print(f)
 
