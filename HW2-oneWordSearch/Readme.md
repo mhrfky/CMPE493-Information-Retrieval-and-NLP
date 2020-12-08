@@ -1,11 +1,17 @@
-# CmpE 493 HW1
+# CmpE 493 HW2
+## Before Running the code:
+* Ensure reuters21578 folder is in the same folder as .py files
+* Ensure stopwords.txt is in the same folder as .py files
 
 ## To run the code: 
 * open the terminal
-* Select the algorithm you want to run
-* python3 <file>.py <string1> <string2>
+* To run preprocessing:<br/><br/>
+python3 prep.py<br/><br/>
+* After that you can delete the reuters21578 folder.
+* At this state, you can run a query. To run a query: <br/><br/>
+python3 queryProcessor.py (pattern)<br/><br/>
+* For Example:<br/><br/>
+python3 queryProcessor.py tur*<br/>
+
   
-  
-### Example Runs:
-* python3 levenshtein_distance.py "a cat" "an act"
-* python3 damerau-levenshtein_distance.py "a cat" "an act"
+
