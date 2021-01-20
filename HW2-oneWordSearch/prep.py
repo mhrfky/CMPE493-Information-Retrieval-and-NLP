@@ -74,7 +74,8 @@ def replaceAndCaseFolding(text : str): #removes punctuations
             text = text.replace(c, ' ')
         else:
             text = text.replace("'s", "")
-    
+            text = text.replace(c, ' ')
+
     return text
 all_files = os.listdir("reuters21578/")
 
@@ -112,7 +113,7 @@ with open('invertedindex.json', 'w') as outfile: #json the invertedindex diction
 
 
 
-
+print(inversedict.keys())
 
 
 
