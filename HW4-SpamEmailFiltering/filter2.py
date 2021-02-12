@@ -305,6 +305,12 @@ def randomizationTest():
           "F score :",f1)
     S = abs(f0-f1)
     print("\n\n\n")
+    print("Macro Averaged Results:\n",
+          "Precision :",(p1+p0)/2,"\n" ,
+          "Recall :",(r1+r0)/2,"\n" ,
+          "F score :",(f1+f0)/2)
+    print("\n\n\n")
+
 
     counter = 0
     R = 1000
