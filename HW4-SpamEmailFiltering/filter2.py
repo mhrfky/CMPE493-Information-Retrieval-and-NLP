@@ -271,10 +271,17 @@ def evaluateResults(test,system : int):
             fn += 1
         elif test[system][i] == 0 and test[2][i] == 0:
             tn += 1
-    P = tp/(tp+fp)
-    R = tp/(tp+fn)
-    F = 2*P*R/(P+R)
+    Pleg = tp/(tp+fp)
+    Rleg = tp/(tp+fn)
+    Fleg = 2*Pleg*Rleg/(Pleg+Rleg)
+    Pspam = tn/(tn+fn)
+    Rspam = tn/(tn+fp)
+    Fspam =  2*Pspam*Rspam/(Pspam+Rspam)
+    P = (Pleg + Pspam)/2
+    R = (Rleg + Rspam)/2
+    F = (Fleg + Fspam)/2
     return P,R,F
+
 
 """
 Does the randomization test with a shuffling probability of 0.5
